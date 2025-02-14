@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Обработка нажатия на кнопку "Да"
     document.getElementById("yesButton").addEventListener("click", function () {
-        mainImage.src = "image2.jpg"; // Меняем картинку
+        mainImage.src = "image2.png"; // Меняем картинку
         mainText.textContent = "Ура! Ты сделал правильный выбор!"; // Меняем текст
         mainText.style.transform = "translateY(-50px)"; // Поднимаем текст вверх
     });

@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Чтобы не было скролла */
 }
 
 .card {
@@ -15,28 +16,41 @@ body {
 
 .hidden {
     opacity: 0;
-    transform: translateY(100%);
     transition: opacity 1s, transform 1s;
 }
 
 .visible {
     opacity: 1;
-    transform: translateY(0);
 }
 
 #mainImage {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
+    transform: translateX(100%); /* Начальное положение за правым краем */
+}
+
+#secondImage {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Начальное состояние второй картинки */
 }
 
 #mainText {
     font-size: 24px;
     color: #333;
+    transform: translateY(0); /* Начальное положение текста */
+    transition: transform 1s;
 }
 
 #buttons {
     margin-top: 20px;
+    transition: opacity 1s;
 }
 
 button {
